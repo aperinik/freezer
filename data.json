@@ -1,0 +1,38 @@
+[
+  {
+    "nome": "Marco",
+    "email": "marco@gmail.com",
+    "id_user": "1rMPMDc2QfLvZ9Jugt6c",
+    "freezers": [
+      {
+        "nomeFreezer": "freezer di marco",
+        "id_freezer": "obK8bnSjZt8HlbU2zEae",
+        "food": [
+          "yogurt"
+        ]
+      }
+    ]
+  },
+  {
+    "nome": "Filippo",
+    "email": "filippo@yahoo.com",
+    "id_user": "Ga68tsCs0tfWf47Q1oXm",
+    "freezers": [
+      {
+        "nomeFreezer": "secondoFreezer",
+        "id_freezer": "5mu2nFxnQJIKgfacdMxx",
+        "food": [
+          "mela",
+          "prosciutto"
+        ]
+      },
+      {
+        "nomeFreezer": "freezerfilippo",
+        "id_freezer": "lvZCkmk4n9SNcwlVDjQ2",
+        "food": [
+          "pera"
+        ]
+      }
+    ]
+  }
+]
