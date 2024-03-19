@@ -7,7 +7,7 @@ var admin = require("firebase-admin");
 
 let output = prompt("Seleziona percorso e nome file di output (vuoto per default: ./data.* ): ");
 if (!output) {
-    output = "./data.json";
+    output = "./data";
 }
 
 let keypath = prompt("Seleziona percorso della key Firestore (vuoto per default: ./key.json): ");
@@ -22,7 +22,7 @@ try{
     });
 }
 catch(e){
-    console.log("Percorso della chiave non valida");
+    console.log("Chiave non valida");
     process.exit();
 }
 
@@ -64,17 +64,17 @@ async function getFood(id_freezer) {
 
 /* Crea il file csv */
 function generateCSV(data) {
-    const head = 'email, freezer, cibo;\n';
     /* Intestazione -  email, freezer, cibo */
+    const head = 'email, freezer, cibo;\n';
     let csv = head;
     for (let user of data) {
         /* Scrivi utenti */
         csv = csv.concat(user.email + ', , ;\n');
         for (let freezer of user.freezers) {
-            /* Scrivi freezer per ogni utente alla colonna giusta */
+            /* Scrivi freezer per ogni utente alla seconda colonna */
             csv = csv.concat('-, ' + freezer.nomeFreezer + ', ;\n');
             for (let food of freezer.food) {
-                /* Scrivi cibo per ogni freezer alla colonna giusta */
+                /* Scrivi cibo per ogni freezer alla terza colonna */
                 csv = csv.concat('-,-, ' + food + ';\n')
             }
         }
